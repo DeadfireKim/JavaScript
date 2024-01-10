@@ -25,7 +25,7 @@ func('test'); // test
 > [!NOTE]
 > JavaScript뿐만 아니라 C, Java, Python 같은 다른 언어들도 마찬가지로 작동합니다.
 
-# = vs == vs ===
+## = vs == vs ===
 한 개(=)는 할당(Assignment)연산자입니다. 변수에 값을 넣을 때 사용하죠.
 
 ```
@@ -41,6 +41,7 @@ console.log( a == b ); // true, 강제 형변환
 console.log( b == c ); // false  
 console.log( a == c ); // true, 강제 형변환  
 console.log( undefined == null ); // true, 강제 형변환  
+console.log( a == Number(3) ); 
 ```
 
 세 개(===, !==)는 일치연산자(strict equality)로 형변환없이 그대로 비교합니다. 
@@ -58,7 +59,7 @@ console.log( undefined === null ); // false
 - 두 피연산자 타입이 다르면 false
 - 두 피연산자가 객체(object)일 때는 동일한 객체만 true 
 - null === null, undefined === undefined 는 true
-- 피연산가 하나라도 NaN이면 false
+- 피연산자가 하나라도 NaN이면 false
 - 같은 타입, 같은 값일 때 true
 
 ```javascript
@@ -68,6 +69,7 @@ console.log( NaN === NaN ); // false
 console.log( +0 === -0 ); // true
 ```
 
+## 끌어올리기 : Hoisting
 
 
 
